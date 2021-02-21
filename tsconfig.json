@@ -10,7 +10,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es5",
-    "rootDir": "src",
+    "rootDir": "./",
     "outDir": "dist",
     "esModuleInterop": true,
     "skipLibCheck": true,

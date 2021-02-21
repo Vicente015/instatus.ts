@@ -1,29 +1,32 @@
 {
-  "name": "instatus.js",
+  "name": "instatus.ts",
   "version": "1.0.0",
   "description": "Library to interact with the Instatus API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "lint": "npx eslint .",
-    "fix": "npx eslint . --fix",
-    "prepublish": "tsc"
+    "build": "npm ci --also-dev && npm run lint && rimraf dist && tsc",
+    "build:test": "npx rimraf dist && tsc",
+    "build:watch": "npx rimraf dist && tsc --watch",
+    "lint": "npx eslint src/",
+    "lint:fix": "npx eslint src/ --fix",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vicente015/instatus.js.git"
+    "url": "git+https://github.com/Vicente015/instatus.ts.git"
   },
   "keywords": [
-    "instatus"
+    "instatus",
+    "api",
+    "node"
   ],
-  "author": "Vicente015",
-  "license": "Apache-2.0", 
+  "author": "Vicente015 <me@vicente015.dev>",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Vicente015/instatus.js/issues"
+    "url": "https://github.com/Vicente015/instatus.ts/issues"
   },
-  "homepage": "https://github.com/Vicente015/instatus.js#readme",
+  "homepage": "https://github.com/Vicente015/instatus.ts#readme",
   "devDependencies": {
     "@types/node": "^14.14.31",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
@@ -36,6 +39,7 @@
     "typescript": "^4.1.5"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "rimraf": "^3.0.2"
   }
 }
