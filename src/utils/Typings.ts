@@ -210,10 +210,22 @@ export interface IncidentUpdatePost {
   statuses: Statuses[]
 }
 
-export interface IncidentUpdatePut{
+export interface IncidentUpdatePut {
   message: string
   components: string[]
   started: Date | string
   notify: boolean
   statuses: Statuses[]
+}
+
+export interface RawComponent {
+  id: string
+  name: string
+  description: string
+  status: ComponentStatus
+  uniqueEmail: string
+  showUptime: boolean
+  order: Number
+  group?: string
+  incidents: RawIncident[]
 }

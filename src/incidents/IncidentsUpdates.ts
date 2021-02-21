@@ -40,7 +40,7 @@ export default class IncidentsUpdates extends Base {
   // PUT /v1/:page_id/incidents/:incident_id/incident-updates/:incident_update_id
   async update (incidentUpdateID: string, data: IncidentUpdatePut): Promise<AxiosResponse<IncidentUpdate>> {
     this.check()
-    return await this.request('put', `${this.client.pageID}/incidents/${this.incidentID}/incident-updates/${incidentUpdateID}`)
+    return await this.request('put', `${this.client.pageID}/incidents/${this.incidentID}/incident-updates/${incidentUpdateID}`, data)
   }
 
   private check (): void {

@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm ci --also-dev && npm run lint && rimraf dist && tsc",
+    "build": "npm run lint && rimraf dist && tsc",
     "build:test": "npx rimraf dist && tsc",
     "build:watch": "npx rimraf dist && tsc --watch",
     "lint": "npx eslint src/",
@@ -42,5 +42,6 @@
   },
   "dependencies": {
     "axios": "^0.21.1"
-  }
+  },
+  "files": ["lib/**/*"]
 }

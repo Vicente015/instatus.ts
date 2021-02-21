@@ -14,7 +14,10 @@ pids
 *.pid
 *.seed
 
+# Tests
 test/
+
+lib/
 
 *.pid.lock
 
