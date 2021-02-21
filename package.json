@@ -8,7 +8,8 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "lint": "npx eslint .",
-    "fix": "npx eslint . --fix"
+    "fix": "npx eslint . --fix",
+    "prepublish": "tsc"
   },
   "repository": {
     "type": "git",
