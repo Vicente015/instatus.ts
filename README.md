@@ -20,7 +20,7 @@ A [Node.js](https://nodejs.org/) library to interact with [Instatus API](https:/
 - [x] Status pages
 - [ ] Components
 - [x] Incidents
-- [ ] Incident updates
+- [x] Incident updates
 - [ ] Maintenances
 - [ ] Maintenance updates
 - [ ] Team members
@@ -34,7 +34,7 @@ A [Node.js](https://nodejs.org/) library to interact with [Instatus API](https:/
 ### Repo
 - [ ] Configure issue templates
 - [ ] Move todos to repo proyects
-- [ ] Publish the package to npm
+- [x] Publish the package to npm
 - [ ] Add contribution, installation, etc to README
 - [ ] Add GitHub Actions to automatize things
 - [ ] Create releases system, with changelogs
