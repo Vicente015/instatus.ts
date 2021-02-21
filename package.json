@@ -2,8 +2,8 @@
   "name": "instatus.ts",
   "version": "1.0.1",
   "description": "Library to interact with the Instatus API",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "npm run lint && rimraf lib && tsc",
     "build:test": "npx rimraf lib && tsc",
