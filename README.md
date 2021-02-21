@@ -27,6 +27,10 @@ A [Node.js](https://nodejs.org/) library to interact with [Instatus API](https:/
 - [ ] Subscribers
 - [ ] Metrics
 
+### Code
+- [ ] Error handler/manager
+- [ ] Better promises in requests
+
 ### Repo
 - [ ] Configure issue templates
 - [ ] Move todos to repo proyects

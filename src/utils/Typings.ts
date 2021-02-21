@@ -1,4 +1,5 @@
 export type PageStatus = 'UP' | 'HASISSUES'
+
 export type ComponentStatus =
   | 'OPERATIONAL'
   | 'UNDERMAINTENANCE'
@@ -6,61 +7,16 @@ export type ComponentStatus =
   | 'PARTIALOUTAGE'
   | 'MINOROUTAGE'
   | 'MAJOROUTAGE'
+
 export type IncidentStatus =
   | 'INVESTIGATING'
   | 'IDENTIFIED'
   | 'MONITORING'
   | 'RESOLVED'
 
-export interface Component {
-  id: string
-  name: string
-  status: ComponentStatus
-  site: {
-    id: string
-    name: string
-    subdomain: string
-    color?: string
-    logoUrl?: string
-    publicEmail?: string
-  }
-}
-
-export interface Update {
-  id: string
-  message: string
-  messsageHtml: string
-  status: IncidentStatus
-  notify: boolean
-  started: Date | string
-  ended?: Date | string
-  duration?: number
-  createdAt: Date | string
-}
-
-export interface Incident {
-  id: string
-  name: string
-  status: IncidentStatus
-  started: Date | string
-  resolved?: Date | string
-  updates: Update[]
-  components: Component[]
-}
-
-export interface Statuses {
-  id: string
-  status: ComponentStatus
-}
-
-export interface IncidentPost {
-  name: string
-  message: string
-  components: string[]
-  started: Date | string
-  status: IncidentStatus
-  notify: boolean
-  statuses: Statuses[]
+export interface InstatusClientOptions {
+  token: string
+  pageID?: string
 }
 
 export interface StatusPage {
@@ -131,4 +87,133 @@ export interface StatusPagesPost {
   dateFormat?: string
   dateFormatShort?: string
   timeformat?: string
+}
+
+export interface StatusPagesPut {
+  id: string
+  name: string
+  status: PageStatus
+  subdomain: string
+  components: string[]
+  logoUrl?: string
+  faviconUrl?: string
+  websiteUrl?: string
+  language: string
+  publicEmail: string
+  useLargeHeader: boolean
+  brandColor?: string
+  okColor?: string
+  disruptedColor?: string
+  degradedColor?: string
+  downColor?: string
+  noticeColor?: string
+  unknownColor?: string
+  googleAnalytics?: string
+  subscribeBySms?: boolean
+  smsService?: string
+  twilioSid?: string
+  twilioToken?: string
+  twilioSender?: string
+  nexmoSecret?: string
+  nexmoSender?: string
+  htmlAboveHeader?: string
+  htmlBelowHeader?: string
+  htmlAboveFooter?: string
+  htmlBelowFooter?: string
+  htmlBelowSummary?: string
+  cssGlobal?: string
+  launchDate?: Date | string
+  dateFormat?: string
+  dateFormatShort?: string
+  timeformat?: string
+  private?: boolean
+  useAllowList: boolean
+}
+
+export interface StatusPagesDelete {
+  id: string
+}
+
+export interface Component {
+  id: string
+  name: string
+  status: ComponentStatus
+  site: {
+    id: string
+    name: string
+    subdomain: string
+    color?: string
+    logoUrl?: string
+    publicEmail?: string
+    slackIntegration?: any[]
+    subscribers?: []
+  }
+  subscribers?: []
+}
+
+export interface RawIncident {
+  id: string
+  name: string
+  status: IncidentStatus
+  started: string
+  resolved?: string
+  updates?: IncidentUpdates[]
+  components: Component[]
+}
+
+export interface IncidentUpdates {
+  id: string
+  message: string
+  messsageHtml: string
+  status: IncidentStatus
+  notify: boolean
+  started: Date | string
+  ended?: Date | string
+  duration?: number
+  createdAt: Date | string
+}
+
+export interface IncidentPost {
+  name: string
+  message: string
+  components: string[]
+  started: Date | string
+  status: IncidentStatus
+  notify: boolean
+  statuses: Statuses[]
+}
+
+export interface Statuses {
+  id: string
+  status: ComponentStatus
+}
+
+export interface IncidentDelete {
+  id: string
+}
+
+export interface IncidentUpdate {
+  id: string
+  message: string
+  messageHtml: string
+  status: IncidentStatus
+  notify: boolean
+  started: Date | string
+  incident: RawIncident
+}
+
+export interface IncidentUpdatePost {
+  message: string
+  components: string[]
+  started: Date | string
+  notify: boolean
+  statuses: Statuses[]
+}
+
+export interface IncidentUpdatePut{
+  message: string
+  components: string[]
+  started: Date | string
+  notify: boolean
+  statuses: Statuses[]
 }

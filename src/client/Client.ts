@@ -1,17 +1,24 @@
-import Incidents from '../incidents/Incidents'
 import StatusPages from '../statusPages/StatusPages'
+import { InstatusClientOptions } from '../utils/Typings'
 
+/**
+ * The main hub to interact with the Instatus API
+ *
+ * @export
+ * @class InstatusClient
+ */
 export default class InstatusClient {
   token: string
   pageID?: string
-  incidents: Incidents
   pages: StatusPages
 
-  constructor (options: {token: string, pageID?: string }) {
+  /**
+   * @param {InstatusClientOptions} options The client options
+   * @memberof InstatusClient
+   */
+  constructor (options: InstatusClientOptions) {
     this.token = options.token
     this.pageID = options.pageID
-
-    this.incidents = new Incidents(this)
     this.pages = new StatusPages(this)
-  };
+  }
 }
