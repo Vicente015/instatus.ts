@@ -8,7 +8,7 @@ import { InstatusClientOptions } from '../utils/Typings'
  * @class InstatusClient
  */
 export default class InstatusClient {
-  token: string
+  key: string
   pageID?: string
   pages: StatusPages
 
@@ -17,7 +17,7 @@ export default class InstatusClient {
    * @memberof InstatusClient
    */
   constructor (options: InstatusClientOptions) {
-    this.token = options.token
+    this.key = options.key
     this.pageID = options.pageID
     this.pages = new StatusPages(this)
   }

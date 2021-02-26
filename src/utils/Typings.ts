@@ -15,7 +15,7 @@ export type IncidentStatus =
   | 'RESOLVED'
 
 export interface InstatusClientOptions {
-  token: string
+  key: string
   pageID?: string
 }
 

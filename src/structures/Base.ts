@@ -34,7 +34,7 @@ export default class Base {
       url: uri,
       baseURL: `${Constants.http.api}/v${Constants.http.version}/`,
       headers: {
-        Authorization: `Bearer ${this.client.token}`,
+        Authorization: `Bearer ${this.client.key}`,
         'content-type': 'application/json'
       },
       data: data
