@@ -1,9 +1,7 @@
 // https://instatus.com/help/api#pages
-import Base from '../structures/Base'
+import { Base, IncidentManager, InstatusClient } from '../'
 import { StatusPage, StatusPagesPost, StatusPagesPut, StatusPagesDelete } from '../utils/Typings'
 import { AxiosResponse } from 'axios'
-import IncidentManager from '../incidents/IncidentManager'
-import InstatusClient from '../client/Client'
 
 export default class StatusPages extends Base {
   incidents: IncidentManager

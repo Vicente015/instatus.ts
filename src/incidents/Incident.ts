@@ -1,7 +1,5 @@
-import Base from '../structures/Base'
-import InstatusClient from '../client/Client'
+import { Base, InstatusClient, IncidentsUpdates } from '../'
 import { RawIncident, IncidentStatus, Component } from '../utils/Typings'
-import IncidentsUpdates from './IncidentsUpdates'
 
 /**
  * Represents an incident

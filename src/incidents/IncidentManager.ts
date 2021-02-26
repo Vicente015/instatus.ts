@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 
-import Base from '../structures/Base'
+import { Base, Incident } from '../'
 import { RawIncident, IncidentPost, IncidentDelete } from '../utils/Typings'
 import { AxiosResponse } from 'axios'
-import Incident from './Incident'
+
 /**
  * A manager of the incidents belonging to a status page
  *

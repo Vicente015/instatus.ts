@@ -1,6 +1,5 @@
-import InstatusClient from '../client/Client'
+import { InstatusClient, Constants } from '../'
 import axios, { Method } from 'axios'
-import Constants from '../utils/Constants'
 
 /**
  * Base class
@@ -40,6 +39,7 @@ export default class Base {
       data: data
     })
     // .catch(err => {})// https://github.com/axios/axios#handling-errors
+    if (this.client.debug === true) console.log('[Debug]', res)
     return res.data
   }
 }

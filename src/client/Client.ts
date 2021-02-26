@@ -1,4 +1,4 @@
-import StatusPages from '../statusPages/StatusPages'
+import { StatusPages } from '../'
 import { InstatusClientOptions } from '../utils/Typings'
 
 /**
@@ -9,6 +9,7 @@ import { InstatusClientOptions } from '../utils/Typings'
  */
 export default class InstatusClient {
   key: string
+  debug?: boolean
   pageID?: string
   pages: StatusPages
 
@@ -19,6 +20,7 @@ export default class InstatusClient {
   constructor (options: InstatusClientOptions) {
     this.key = options.key
     this.pageID = options.pageID
+    this.debug = options.debug
     this.pages = new StatusPages(this)
   }
 }

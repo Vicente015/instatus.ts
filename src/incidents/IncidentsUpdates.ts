@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import Base from '../structures/Base'
+import { Base, InstatusClient } from '../'
 import { IncidentUpdate, IncidentUpdatePost, IncidentUpdatePut } from '../utils/Typings'
 import { AxiosResponse } from 'axios'
-import InstatusClient from '../client/Client'
 
 /**
  * The updates

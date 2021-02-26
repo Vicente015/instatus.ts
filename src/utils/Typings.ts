@@ -17,6 +17,7 @@ export type IncidentStatus =
 export interface InstatusClientOptions {
   key: string
   pageID?: string
+  debug?: boolean
 }
 
 export interface StatusPage {
@@ -155,9 +156,9 @@ export interface RawIncident {
   id: string
   name: string
   status: IncidentStatus
-  started: string
-  resolved?: string
-  updates?: IncidentUpdates[]
+  started: Date
+  resolved?: Date
+  updates?: IncidentUpdates
   components: Component[]
 }
 
@@ -223,7 +224,7 @@ export interface RawComponent {
   name: string
   description: string
   status: ComponentStatus
-  uniqueEmail: string
+  uniqueEmail?: string
   showUptime: boolean
   order: Number
   group?: string
