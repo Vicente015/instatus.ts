@@ -16,6 +16,7 @@ pids
 
 # Tests
 test/
+test.*
 
 lib/
 

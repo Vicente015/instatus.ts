@@ -1,4 +1,5 @@
 import Base from './structures/Base'
+import BaseClient from './structures/BaseClient'
 import InstatusClient from './client/Client'
 import StatusPages from './statusPages/StatusPages'
 import Incident from './incidents/Incident'
@@ -10,6 +11,7 @@ import ComponentManager from './components/ComponentManager'
 
 export {
   Base,
+  BaseClient,
   InstatusClient,
   IncidentManager,
   Incident,

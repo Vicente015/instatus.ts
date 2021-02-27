@@ -1,4 +1,5 @@
-import { StatusPages } from '../'
+/* eslint-disable no-void */
+import { BaseClient, StatusPages } from '../'
 import { InstatusClientOptions } from '../utils/Typings'
 
 /**
@@ -7,7 +8,7 @@ import { InstatusClientOptions } from '../utils/Typings'
  * @export
  * @class InstatusClient
  */
-export default class InstatusClient {
+export default class InstatusClient extends BaseClient {
   key: string
   debug?: boolean
   pageID?: string
@@ -18,9 +19,16 @@ export default class InstatusClient {
    * @memberof InstatusClient
    */
   constructor (options: InstatusClientOptions) {
+    super()
     this.key = options.key
     this.pageID = options.pageID
     this.debug = options.debug
     this.pages = new StatusPages(this)
+    if (this.pageID === undefined) void this.setDefaultPage()
+  }
+
+  private async setDefaultPage (): Promise<void> {
+    const res = await this.request(this.key, 'get', 'pages')
+    this.pageID = res[0].id
   }
 }
