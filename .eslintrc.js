@@ -1,6 +1,7 @@
 module.exports = {
   extends: 'standard-with-typescript',
   parserOptions: {
-    project: './tsconfig.json'
+    project: './tsconfig.json',
+    include: ['src']
   }
 }
