@@ -1,5 +1,5 @@
-import { Base, InstatusClient, IncidentsUpdates } from '../'
-import { RawIncident, IncidentStatus, Component } from '../utils/Typings'
+import { Base, InstatusClient, IncidentsUpdates, PartialComponent } from '../'
+import { RawIncident, IncidentStatus } from '../utils/Typings'
 
 /**
  * Represents an incident
@@ -9,13 +9,13 @@ import { RawIncident, IncidentStatus, Component } from '../utils/Typings'
  * @extends {Base}
  */
 export default class Incident extends Base {
-  id!: string
-  name!: string
-  status!: IncidentStatus
-  started!: Date
+  id: string
+  name: string
+  status: IncidentStatus
+  started: Date
   resolved?: Date
   updates: IncidentsUpdates
-  components!: Component[]
+  components: PartialComponent[]
 
   /**
    * @param {InstatusClient} client The client that instantiated this
@@ -24,7 +24,6 @@ export default class Incident extends Base {
    */
   constructor (client: InstatusClient, data: RawIncident) {
     super(client)
-
     this._parse(data)
     this.updates = new IncidentsUpdates(this.client, this.id)
   }
@@ -35,6 +34,8 @@ export default class Incident extends Base {
     this.status = data.status
     this.started = new Date(data.started)
     if (data.resolved !== undefined) this.resolved = new Date(data.resolved)
-    this.components = data.components
+    const partial: PartialComponent[] = []
+    data.components.forEach(i => partial.push(new PartialComponent(this.client, i)))
+    this.components = partial
   }
 }

@@ -1,3 +1,5 @@
+import { PartialComponent } from '..'
+
 export type PageStatus = 'UP' | 'HASISSUES'
 
 export type ComponentStatus =
@@ -159,7 +161,7 @@ export interface RawIncident {
   started: Date
   resolved?: Date
   updates?: IncidentUpdates
-  components: Component[]
+  components: PartialComponent[]
 }
 
 export interface IncidentUpdates {
@@ -226,7 +228,37 @@ export interface RawComponent {
   status: ComponentStatus
   uniqueEmail?: string
   showUptime: boolean
-  order: Number
+  order: number
   group?: string
   incidents: RawIncident[]
+}
+
+export interface ComponentPost {
+  name: string
+  description: string
+  status: ComponentStatus
+  order: number
+  showUptime: boolean
+  grouped: boolean
+}
+
+export interface ComponentDelete {
+  id: string
+}
+
+export interface RawPartialComponent {
+  id: string
+  name: string
+  status: ComponentStatus
+  showUptime: boolean
+  site: PartialSite
+}
+
+export interface PartialSite {
+  id: string
+  name: string
+  subdomain: string
+  color?: string
+  logoUrl?: string
+  publicEmail?: string
 }

@@ -7,6 +7,7 @@ import IncidentsUpdates from './incidents/IncidentsUpdates'
 import Constants from './utils/Constants'
 import Component from './components/Component'
 import ComponentManager from './components/ComponentManager'
+import PartialComponent from './components/PartialComponent'
 
 export {
   Base,
@@ -16,6 +17,7 @@ export {
   IncidentsUpdates,
   ComponentManager,
   Component,
+  PartialComponent,
   StatusPages,
   Constants
 }

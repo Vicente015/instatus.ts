@@ -1,32 +1,28 @@
 import { AxiosResponse } from 'axios'
-import { Base, Incident, InstatusClient } from '../'
-import { RawComponent, ComponentStatus, ComponentPost, ComponentDelete } from '../utils/Typings'
+import { Base, Component, InstatusClient } from '../'
+import { RawComponent, ComponentStatus, ComponentPost, ComponentDelete, PartialSite } from '../utils/Typings'
 
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /**
- * Represents an Component
+ * Represents an partial component returned by the incident
  *
  * @export
  * @class Component
  * @extends {Base}
  */
-export default class Component extends Base {
+export default class PartialComponent extends Base {
   id!: string
   name!: string
-  description!: string
   status!: ComponentStatus
-  uniqueEmail?: string
   showUptime!: boolean
-  order!: Number
-  group?: string
-  incidents!: Incident[]
+  site!: PartialSite[]
 
   /**
    * @param {InstatusClient} client The client that instantiated this
-   * @param {RawComponent} data The component raw data
+   * @param {PartialComponent} data The partial component
    * @memberof Component
    */
-  constructor (client: InstatusClient, data: RawComponent) {
+  constructor (client: InstatusClient, data: PartialComponent) {
     super(client)
     this._parse(data)
   }
@@ -76,15 +72,11 @@ export default class Component extends Base {
     if (this.client.pageID === undefined) throw Error('PageID undefined')
   }
 
-  private _parse (data: RawComponent): void {
+  private _parse (data: PartialComponent): void {
     this.id = data.id
     this.name = data.name
-    this.description = data.description
     this.status = data.status
-    this.uniqueEmail = data.uniqueEmail
     this.showUptime = data.showUptime
-    this.order = data.order
-    this.group = data.group
-    this.incidents = data.incidents.map(i => new Incident(this.client, i))
+    this.site = data.site
   }
 }
