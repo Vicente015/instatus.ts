@@ -1,6 +1,6 @@
 {
   "name": "instatus.ts",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Library to interact with the Instatus API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
