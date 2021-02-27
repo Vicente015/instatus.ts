@@ -1,7 +1,7 @@
 <div align="center">
   <br/>
   <p>
-    <a href="https://www.npmjs.com/package/instatus.ts"><img src="https://cdn.jsdelivr.net/gh/Vicente015/instatus.ts/.github/instatus.ts.svg" width="546" alt="instatus.ts"/></a>
+    <a href="https://www.npmjs.com/package/instatus.ts"><img src="https://cdn.jsdelivr.net/gh/Vicente015/instatus.ts/.github/header.svg" width="546" alt="instatus.ts"/></a>
   </p>
   <p>
     <a href="https://www.npmjs.com/package/instatus.ts"><img src="https://img.shields.io/npm/v/instatus.ts.svg?maxAge=3600" alt="Version"/></a>
