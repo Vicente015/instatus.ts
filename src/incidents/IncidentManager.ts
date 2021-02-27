@@ -20,7 +20,7 @@ export default class IncidentsManager extends Base {
    * @memberof IncidentsManager
    */
   async getAll (): Promise<Incident[]> {
-    this.check()
+    this._check()
     const incidents: Incident[] = []
     const rawIncidents: RawIncident[] = await this.request('get', `${this.client.pageID}/incidents`)
     rawIncidents.forEach(rawIncident => incidents.push(new Incident(this.client, rawIncident)))
@@ -37,7 +37,7 @@ export default class IncidentsManager extends Base {
    * @memberof IncidentsManager
    */
   async get (incidentID: string): Promise<Incident> {
-    this.check(incidentID)
+    this._check(incidentID)
     const rawIncident: RawIncident = await this.request('get', `${this.client.pageID}/incidents/${incidentID}`)
     return new Incident(this.client, rawIncident)
   }
@@ -51,7 +51,7 @@ export default class IncidentsManager extends Base {
    * @memberof IncidentsManager
    */
   async add (data: IncidentPost): Promise<Incident> {
-    this.check()
+    this._check()
     const rawIncident: RawIncident = await this.request('post', `${this.client.pageID}/incidents/`, data)
     return new Incident(this.client, rawIncident)
   }
@@ -66,7 +66,7 @@ export default class IncidentsManager extends Base {
    * @memberof IncidentsManager
    */
   async update (incidentID: string, data: IncidentPost): Promise<Incident> {
-    this.check(incidentID)
+    this._check(incidentID)
     const rawIncident: RawIncident = await this.request('put', `${this.client.pageID}/incidents/${incidentID}`, data)
     return new Incident(this.client, rawIncident)
   }
@@ -80,11 +80,11 @@ export default class IncidentsManager extends Base {
    * @memberof IncidentsManager
    */
   async delete (incidentID: string): Promise<AxiosResponse<IncidentDelete>> {
-    this.check(incidentID)
+    this._check(incidentID)
     return await this.request('delete', `${this.client.pageID}/incidents/${incidentID}`)
   }
 
-  private check (incidentID?: string): void {
+  private _check (incidentID?: string): void {
     if (incidentID !== undefined && typeof incidentID !== 'string') throw Error('IncidentID must be a string')
     if (this.client.pageID === undefined) throw Error('PageID undefined')
   }

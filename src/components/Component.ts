@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { AxiosResponse } from 'axios'
 import { Base, Incident, InstatusClient } from '../'
 import { RawComponent, ComponentStatus, ComponentPost, ComponentDelete } from '../utils/Typings'
 
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 /**
  * Represents an Component
  *
@@ -11,15 +11,15 @@ import { RawComponent, ComponentStatus, ComponentPost, ComponentDelete } from '.
  * @extends {Base}
  */
 export default class Component extends Base {
-  id!: string
-  name!: string
-  description!: string
-  status!: ComponentStatus
+  id: string
+  name: string
+  description: string
+  status: ComponentStatus
   uniqueEmail?: string
-  showUptime!: boolean
-  order!: Number
+  showUptime: boolean
+  order: Number
   group?: string
-  incidents!: Incident[]
+  incidents: Incident[]
 
   /**
    * @param {InstatusClient} client The client that instantiated this
