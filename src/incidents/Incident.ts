@@ -81,8 +81,6 @@ export default class Incident extends Base {
     this.status = data.status
     this.started = new Date(data.started)
     if (data.resolved !== undefined) this.resolved = new Date(data.resolved)
-    const partial: PartialComponent[] = []
-    data.components.forEach(i => partial.push(new PartialComponent(this.client, i)))
-    this.components = partial
+    this.components = data.components.map(i => new PartialComponent(this.client, i))
   }
 }
