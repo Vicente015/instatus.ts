@@ -11,15 +11,15 @@ import { RawComponent, ComponentStatus, ComponentPost, ComponentDelete } from '.
  * @extends {Base}
  */
 export default class Component extends Base {
-  id: string
-  name: string
-  description: string
-  status: ComponentStatus
+  id!: string
+  name!: string
+  description: string | undefined
+  status: ComponentStatus = 'OPERATIONAL'
   uniqueEmail?: string
-  showUptime: boolean
-  order: Number
+  showUptime: boolean = false
+  order!: Number
   group?: string
-  incidents: Incident[]
+  incidents!: Incident[]
 
   /**
    * @param {InstatusClient} client The client that instantiated this

@@ -11,13 +11,13 @@ import { RawIncident, IncidentStatus, IncidentPost, IncidentDelete } from '../ut
  * @extends {Base}
  */
 export default class Incident extends Base {
-  id: string
-  name: string
-  status: IncidentStatus
-  started: Date
+  id!: string
+  name!: string
+  status!: IncidentStatus
+  started!: Date
   resolved?: Date
   updates: IncidentsUpdates
-  components: PartialComponent[]
+  components!: PartialComponent[]
 
   /**
    * @param {InstatusClient} client The client that instantiated this
