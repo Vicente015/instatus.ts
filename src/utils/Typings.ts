@@ -262,3 +262,49 @@ export interface PartialSite {
   logoUrl?: string
   publicEmail?: string
 }
+
+export interface RawMetric {
+  id: string
+  name: string
+  active: boolean
+  order: number
+  suffix: string
+  data: MetricData[]
+}
+
+export interface MetricData {
+  timestamp: number
+  value: number
+}
+
+export interface MetricPut {
+  name: string
+  suffix: string
+}
+
+export interface MetricDataPoint {
+  id: string
+  value: number
+  timestamp: number
+}
+
+export interface MetricDataPointPost {
+  timestamp: number
+  value: number
+}
+
+export interface RawTeamMember {
+  id: string
+  user: TeamUser
+}
+
+export interface TeamUser {
+  id: string
+  name: string
+  email: string
+  avatar: string
+}
+
+export interface TeamMemberPost {
+  email: string
+}

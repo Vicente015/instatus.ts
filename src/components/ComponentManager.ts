@@ -19,7 +19,7 @@ export default class ComponentManager extends Base {
    * @memberof ComponentManager
    */
   async getAll (): Promise<Component[]> {
-    this.check()
+    this._check()
     const components: Component[] = []
     const rawComponents: RawComponent[] = await this.request('get', `${this.client.pageID}/components`)
     rawComponents.forEach(i => components.push(new Component(this.client, i)))
@@ -35,7 +35,7 @@ export default class ComponentManager extends Base {
    * @memberof ComponentManager
    */
   async get (componentID: string): Promise<Component> {
-    this.check(componentID)
+    this._check(componentID)
     const rawComponent: RawComponent = await this.request('get', `${this.client.pageID}/components/${componentID}`)
     return new Component(this.client, rawComponent)
   }
@@ -49,7 +49,7 @@ export default class ComponentManager extends Base {
    * @memberof ComponentManager
    */
   async add (data: ComponentPost): Promise<Component> {
-    this.check()
+    this._check()
     const rawComponent: RawComponent = await this.request('post', `${this.client.pageID}/components`, data)
     return new Component(this.client, rawComponent)
   }
@@ -64,7 +64,7 @@ export default class ComponentManager extends Base {
    * @memberof ComponentManager
    */
   async update (componentID: string, data: ComponentPost): Promise<Component> {
-    this.check(componentID)
+    this._check(componentID)
     const rawComponent: RawComponent = await this.request('put', `${this.client.pageID}/components/${componentID}`, data)
     return new Component(this.client, rawComponent)
   }
@@ -78,11 +78,11 @@ export default class ComponentManager extends Base {
    * @memberof ComponentManager
    */
   async delete (componentID: string): Promise<AxiosResponse<ComponentDelete>> {
-    this.check(componentID)
+    this._check(componentID)
     return await this.request('delete', `${this.client.pageID}/components/${componentID}`)
   }
 
-  private check (componentID?: string): void {
+  private _check (componentID?: string): void {
     if (componentID !== undefined && typeof componentID !== 'string') throw Error('ComponentID must be a string')
     if (this.client.pageID === undefined) throw Error('PageID undefined')
   }

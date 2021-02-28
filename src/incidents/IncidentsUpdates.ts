@@ -4,7 +4,7 @@ import { IncidentUpdate, IncidentUpdatePost, IncidentUpdatePut } from '../utils/
 import { AxiosResponse } from 'axios'
 
 /**
- * The updates
+ * The incident updates
  *
  * @export
  * @class IncidentsUpdates
@@ -25,18 +25,40 @@ export default class IncidentsUpdates extends Base {
   }
 
   // GET /v1/:page_id/incidents/:incident_id/incident-updates/:incident_update_id
+  /**
+   * Gets an incident update
+   *
+   * @param {string} incidentUpdateId The incident update ID
+   * @return {*}  {Promise<AxiosResponse<IncidentUpdate>>}
+   * @memberof IncidentsUpdates
+   */
   async get (incidentUpdateId: string): Promise<AxiosResponse<IncidentUpdate>> {
     this._check()
     return await this.request('get', `${this.client.pageID}/incidents/${this.incidentID}/incident-updates/${incidentUpdateId}`)
   }
 
   // POST /v1/:page_id/incidents/:incident_id/incident-updates
+  /**
+   * Adds an incident update
+   *
+   * @param {IncidentUpdatePost} data
+   * @return {*}  {Promise<AxiosResponse<IncidentUpdate>>}
+   * @memberof IncidentsUpdates
+   */
   async add (data: IncidentUpdatePost): Promise<AxiosResponse<IncidentUpdate>> {
     this._check()
     return await this.request('post', `${this.client.pageID}/incidents/${this.incidentID}/incidents-updates`, data)
   }
 
   // PUT /v1/:page_id/incidents/:incident_id/incident-updates/:incident_update_id
+  /**
+   * Updates an incident update
+   *
+   * @param {string} incidentUpdateID The incident update ID
+   * @param {IncidentUpdatePut} data
+   * @return {*}  {Promise<AxiosResponse<IncidentUpdate>>}
+   * @memberof IncidentsUpdates
+   */
   async update (incidentUpdateID: string, data: IncidentUpdatePut): Promise<AxiosResponse<IncidentUpdate>> {
     this._check()
     return await this.request('put', `${this.client.pageID}/incidents/${this.incidentID}/incident-updates/${incidentUpdateID}`, data)

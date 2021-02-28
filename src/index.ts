@@ -9,6 +9,10 @@ import Constants from './utils/Constants'
 import Component from './components/Component'
 import ComponentManager from './components/ComponentManager'
 import PartialComponent from './components/PartialComponent'
+import Metric from './metrics/Metric'
+import MetricManager from './metrics/MetricManager'
+import TeamMember from './teamMembers/TeamMember'
+import TeamMemberManager from './teamMembers/TeamMemberManager'
 
 export {
   Base,
@@ -20,6 +24,10 @@ export {
   ComponentManager,
   Component,
   PartialComponent,
+  Metric,
+  MetricManager,
+  TeamMember,
+  TeamMemberManager,
   StatusPages,
   Constants
 }

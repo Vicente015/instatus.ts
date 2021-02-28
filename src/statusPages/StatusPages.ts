@@ -1,19 +1,21 @@
 // https://instatus.com/help/api#pages
-import { Base, ComponentManager, IncidentManager, InstatusClient } from '../'
+import { Base, ComponentManager, IncidentManager, InstatusClient, MetricManager, TeamMemberManager } from '../'
 import { StatusPage, StatusPagesPost, StatusPagesPut, StatusPagesDelete } from '../utils/Typings'
 import { AxiosResponse } from 'axios'
 
 export default class StatusPages extends Base {
   incidents: IncidentManager
   components: ComponentManager
+  metrics: MetricManager
+  members: TeamMemberManager
 
   constructor (client: InstatusClient) {
     super(client)
 
-    // this.components
-    // this.maintenances
     this.incidents = new IncidentManager(this.client)
     this.components = new ComponentManager(this.client)
+    this.metrics = new MetricManager(this.client)
+    this.members = new TeamMemberManager(this.client)
   }
 
   // GET /v1/pages
