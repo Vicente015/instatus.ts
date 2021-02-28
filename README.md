@@ -1,7 +1,7 @@
 <div align="center">
   <br/>
   <p>
-    <a href="https://www.npmjs.com/package/instatus.ts"><img src="https://cdn.jsdelivr.net/gh/Vicente015/instatus.ts@dev/.github/header.svg" width="546" alt="instatus.ts"/></a>
+    <a href="https://instatus.vicente015.dev/"><img src="https://cdn.jsdelivr.net/gh/Vicente015/instatus.ts@dev/.github/header.svg" width="546" alt="instatus.ts"/></a>
   </p>
   <p>
     <a href="https://www.npmjs.com/package/instatus.ts"><img src="https://img.shields.io/npm/v/instatus.ts.svg?maxAge=3600" alt="Version"/></a>
@@ -21,6 +21,9 @@
 ## About
 A [Node.js](https://nodejs.org/) library to interact with [Instatus API](https://instatus.com/help/api).
 
+* Written in TypeScript.
+* Object-oriented.
+
 ## Installation
 * With NPM: `npm install instatus.ts`
 * With Yarn: `yarn add instatus.ts`
@@ -28,7 +31,7 @@ A [Node.js](https://nodejs.org/) library to interact with [Instatus API](https:/
 ## Example usage
 * JavaScript: 
   ```js
-  const InstatusClient = require('instatus.ts')
+  const { InstatusClient } = require('instatus.ts')
   const client = new InstatusClient({
     key: 'YOUR_API_KEY', // You can get it in https://instatus.com/app/developer
     pageID: 'PAGE_ID' // You can get it with client.pages.get(), default to the first page
@@ -59,4 +62,4 @@ A [Node.js](https://nodejs.org/) library to interact with [Instatus API](https:/
 * TypeScript: ...
 
 ## Documentation
-soon™
+You can see the documentation [here](https://instatus.vicente015.dev/).
