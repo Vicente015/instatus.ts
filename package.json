@@ -10,7 +10,8 @@
     "build:watch": "npx rimraf lib && tsc --watch",
     "lint": "npx eslint src/",
     "lint:fix": "npx eslint src/ --fix",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "docs": "rimraf docs && typedoc"
   },
   "repository": {
     "type": "git",
@@ -35,10 +36,9 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "jsdoc": "^3.6.6",
-    "minami": "^1.2.3",
     "typescript": "^4.1.5",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "typedoc": "^0.20.28"
   },
   "dependencies": {
     "axios": "^0.21.1"

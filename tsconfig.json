@@ -15,8 +15,15 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "removeComments": true,
+    "removeComments": false,
     "strictNullChecks":  true
+  },
+  "typedocOptions": {
+    "out": "docs",
+    "entryPoints": ["src/index.ts"],
+    "excludePrivate": true,
+    "includeVersion": true,
+    "categorizeByGroup": true
   },
   "include": ["src"],
   "exclude": [
