@@ -11,7 +11,7 @@
     "lint": "npx eslint src/",
     "lint:fix": "npx eslint src/ --fix",
     "prepublishOnly": "npm run build",
-    "docs": "rimraf docs && rimraf README.md && typedoc"
+    "docs": "rimraf docs && typedoc"
   },
   "repository": {
     "type": "git",
