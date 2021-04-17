@@ -10,14 +10,14 @@
 - name: Examples
   files:
     - name: Getting started
-      path: examples/basic.js
+      path: basic.js
       id: basic
     - name: Managing components
-      path: examples/components.js
+      path: components.js
       id: basic
     - name: Managing incidents
-      path: examples/incidents.js
+      path: incidents.js
       id: basic
     - name: Posting custom metrics
-      path: examples/metrics.js
+      path: metrics.js
       id: basic
