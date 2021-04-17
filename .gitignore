@@ -21,6 +21,7 @@ test.*
 lib/
 docs/docs.json
 .tmp/
+.vscode/
 
 *.pid.lock
 
