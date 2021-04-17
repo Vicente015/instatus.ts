@@ -6,3 +6,18 @@
     - name: Changelog
       path: ../../CHANGELOG.md
       id: changelog
+
+- name: Examples
+  files:
+    - name: Getting started
+      path: examples/basic.js
+      id: basic
+    - name: Managing components
+      path: examples/components.js
+      id: basic
+    - name: Managing incidents
+      path: examples/incidents.js
+      id: basic
+    - name: Posting custom metrics
+      path: examples/metrics.js
+      id: basic
