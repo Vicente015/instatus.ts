@@ -14,10 +14,10 @@
       id: basic
     - name: Managing components
       path: components.js
-      id: basic
+      id: components
     - name: Managing incidents
       path: incidents.js
-      id: basic
+      id: incidents
     - name: Posting custom metrics
       path: metrics.js
-      id: basic
+      id: metrics
