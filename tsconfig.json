@@ -18,16 +18,15 @@
     "removeComments": false,
     "strictNullChecks":  true
   },
-  "typedocOptions": {
-    "out": "docs",
-    "entryPoints": ["src/index.ts"],
-    "excludePrivate": true,
-    "includeVersion": true,
-    "categorizeByGroup": true
-  },
-  "include": ["src"],
+  "include": ["**/*"],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "lib",
+    "scripts",
+    "docs",
+    "examles",
+    "test",
+    "testing"
   ]
 }

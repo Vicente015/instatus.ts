@@ -8,10 +8,10 @@
     "build": "npm run lint && rimraf lib && tsc",
     "build:test": "npx rimraf lib && tsc",
     "build:watch": "npx rimraf lib && tsc --watch",
-    "lint": "npx eslint src/",
-    "lint:fix": "npx eslint src/ --fix",
+    "lint": "npx eslint --ext .ts src/",
+    "lint:fix": "npx eslint --ext .ts src/ --fix",
     "prepublishOnly": "npm run build",
-    "docs": "rimraf docs && typedoc"
+    "docs": "npx typedoc --json .tmp/typedoc-out.json --plugin typedoc-plugin-as-member-of && ts-node scripts/docs"
   },
   "repository": {
     "type": "git",
@@ -36,14 +36,14 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "typescript": "^4.1.5",
+    "typescript": "^4.2.4",
     "rimraf": "^3.0.2",
-    "typedoc": "^0.20.28"
+    "ts-docgen": "github:dbots-pkg/ts-docgen#main",
+    "ts-node": "^9.1.1",
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-as-member-of": "^1.0.2"
   },
   "dependencies": {
     "axios": "^0.21.1"
-  },
-  "files": [
-    "lib/**/*"
-  ]
+  }
 }
