@@ -40,7 +40,7 @@
     "rimraf": "^3.0.2",
     "ts-docgen": "github:dbots-pkg/ts-docgen#main",
     "ts-node": "^9.1.1",
-    "typedoc": "^0.19.2",
+    "typedoc": "^0.20.36",
     "typedoc-plugin-as-member-of": "^1.0.2"
   },
   "dependencies": {
