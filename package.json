@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/Vicente015/instatus.ts#readme",
   "devDependencies": {
-    "@types/node": "^15.0.1",
+    "@types/node": "^16.3.3",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "eslint": "^7.20.0",
     "eslint-config-standard-with-typescript": "^20.0.0",
