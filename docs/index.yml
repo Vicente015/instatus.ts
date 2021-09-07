@@ -1,0 +1,23 @@
+- name: General
+  files:
+    - name: Welcome
+      path: ../../README.md
+      id: welcome
+    - name: Changelog
+      path: ../../CHANGELOG.md
+      id: changelog
+
+- name: Examples
+  files:
+    - name: Getting started
+      path: basic.js
+      id: basic
+    - name: Managing components
+      path: components.js
+      id: components
+    - name: Managing incidents
+      path: incidents.js
+      id: incidents
+    - name: Posting custom metrics
+      path: metrics.js
+      id: metrics
