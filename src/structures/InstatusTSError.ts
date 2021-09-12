@@ -6,7 +6,4 @@ export default class InstatusTSError extends Error {
         this.name = 'InstatusTSError'
     }
 
-    private test(): void {
-        throw new InstatusTSError('This is a test, no action is needed :)')
-    }
 }
