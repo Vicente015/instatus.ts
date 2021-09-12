@@ -40,12 +40,8 @@ export default class Base {
       data: data
     })
       .catch((err: Error | axios.AxiosError) => {
-        if (err.response) { }
-        else if (err.request) {
-          throw new InstatusTSError(err.request)
-        }
-        else {
-          throw new InstatusTSError(err.message)
+        if (err.request || err.message) {
+          throw new InstatusTSError(err.request ?? err.message)
         }
       })
     if (this.client.debug === true) console.log('[Debug]', res)
