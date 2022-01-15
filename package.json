@@ -2,12 +2,15 @@
   "name": "instatus.ts",
   "version": "1.2.2",
   "description": "Library to interact with the Instatus API",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "npm run lint && rimraf lib && tsc",
-    "build:test": "npx rimraf lib && tsc",
-    "build:watch": "npx rimraf lib && tsc --watch",
+    "build": "npm run lint && rimraf dist && tsc",
+    "build:test": "npx rimraf dist && tsc",
+    "build:watch": "npx rimraf dist && tsc --watch",
     "lint": "npx eslint --ext .ts src/",
     "lint:fix": "npx eslint --ext .ts src/ --fix",
     "prepublishOnly": "npm run build",

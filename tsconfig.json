@@ -10,7 +10,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "target": "es5",
-    "outDir": "lib",
+    "outDir": "dist",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -18,15 +18,5 @@
     "removeComments": false,
     "strictNullChecks":  true
   },
-  "include": ["**/*"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "lib",
-    "scripts",
-    "docs",
-    "examles",
-    "test",
-    "testing"
-  ]
+  "include": ["src/**/*.ts"]
 }
