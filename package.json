@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/Vicente015/instatus.ts#readme",
   "dependencies": {
-    "axios": "^0.26.1"
+    "axios": "^1.3.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.8",
