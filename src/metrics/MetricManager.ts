@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { Base } from '..'
-import { MetricDataPoint, MetricDataPointPost, MetricPut, RawMetric } from '../utils/Typings'
+import { type MetricDataPoint, type MetricDataPointPost, type MetricPut, type RawMetric } from '../utils/Typings'
 import Metric from './Metric'
 
 /**

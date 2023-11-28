@@ -1,7 +1,7 @@
 // https://instatus.com/help/api#pages
-import { Base, ComponentManager, IncidentManager, InstatusClient, MetricManager, TeamMemberManager } from '../'
-import { StatusPage, StatusPagesPost, StatusPagesPut, StatusPagesDelete } from '../utils/Typings'
-import { AxiosResponse } from 'axios'
+import { Base, ComponentManager, IncidentManager, type InstatusClient, MetricManager, TeamMemberManager } from '../'
+import { type StatusPage, type StatusPagesPost, type StatusPagesPut, type StatusPagesDelete } from '../utils/Typings'
+import { type AxiosResponse } from 'axios'
 
 export default class StatusPages extends Base {
   incidents: IncidentManager

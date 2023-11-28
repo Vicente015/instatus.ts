@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { AxiosResponse } from 'axios'
+import { type AxiosResponse } from 'axios'
 import { Base, Component } from '../'
-import { ComponentDelete, ComponentPost, RawComponent } from '../utils/Typings'
+import { type ComponentDelete, type ComponentPost, type RawComponent } from '../utils/Typings'
 
 /**
  * A manager of the components belonging to a status page

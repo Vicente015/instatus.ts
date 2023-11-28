@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { AxiosResponse } from 'axios'
-import { Base, Incident, InstatusClient } from '../'
-import { RawComponent, ComponentStatus, ComponentPost, ComponentDelete } from '../utils/Typings'
+import { type AxiosResponse } from 'axios'
+import { Base, Incident, type InstatusClient } from '../'
+import { type RawComponent, type ComponentStatus, type ComponentPost, type ComponentDelete } from '../utils/Typings'
 
 /**
  * Represents an Component
@@ -17,7 +17,7 @@ export default class Component extends Base {
   status: ComponentStatus = 'OPERATIONAL'
   uniqueEmail?: string
   showUptime: boolean = false
-  order!: Number
+  order!: number
   group?: string
   incidents!: Incident[]
 

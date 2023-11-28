@@ -1,5 +1,5 @@
-import { InstatusClient, Constants } from '../'
-import axios, { Method } from 'axios'
+import { type InstatusClient, Constants } from '../'
+import axios, { type Method } from 'axios'
 
 /**
  * Base class
@@ -29,14 +29,14 @@ export default class Base {
    */
   async request (method: Method, uri: string, data?: object): Promise<any> {
     const res = await axios({
-      method: method,
+      method,
       url: uri,
       baseURL: `${Constants.http.api}/v${Constants.http.version}/`,
       headers: {
         Authorization: `Bearer ${this.client.key}`,
         'content-type': 'application/json'
       },
-      data: data
+      data
     })
     // .catch(err => {})// https://github.com/axios/axios#handling-errors
     if (this.client.debug === true) console.log('[Debug]', res)

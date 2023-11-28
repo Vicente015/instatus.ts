@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { Base, InstatusClient } from '../'
-import { IncidentUpdate, IncidentUpdatePost, IncidentUpdatePut } from '../utils/Typings'
-import { AxiosResponse } from 'axios'
+import { Base, type InstatusClient } from '../'
+import { type IncidentUpdate, type IncidentUpdatePost, type IncidentUpdatePut } from '../utils/Typings'
+import { type AxiosResponse } from 'axios'
 
 /**
  * The incident updates

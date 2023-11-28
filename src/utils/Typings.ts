@@ -1,4 +1,4 @@
-import { PartialComponent } from '..'
+import { type PartialComponent } from '..'
 
 export type PageStatus = 'UP' | 'HASISSUES'
 

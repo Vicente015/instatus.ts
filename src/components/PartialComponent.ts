@@ -1,6 +1,6 @@
-import { AxiosResponse } from 'axios'
-import { Base, Component, InstatusClient } from '../'
-import { RawComponent, ComponentStatus, ComponentPost, ComponentDelete, PartialSite } from '../utils/Typings'
+import { type AxiosResponse } from 'axios'
+import { Base, Component, type InstatusClient } from '../'
+import { type RawComponent, type ComponentStatus, type ComponentPost, type ComponentDelete, type PartialSite } from '../utils/Typings'
 
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /**

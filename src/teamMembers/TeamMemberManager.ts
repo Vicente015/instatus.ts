@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { Base, TeamMember } from '../'
-import { RawTeamMember, TeamMemberPost } from '../utils/Typings'
+import { type RawTeamMember, type TeamMemberPost } from '../utils/Typings'
 
 export default class TeamMemberManager extends Base {
   // GET /v1/:page_id/team

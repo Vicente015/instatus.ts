@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { Base, InstatusClient } from '../'
-import { MetricData, MetricDataPoint, MetricDataPointPost, MetricPut, RawMetric } from '../utils/Typings'
+import { Base, type InstatusClient } from '../'
+import { type MetricData, type MetricDataPoint, type MetricDataPointPost, type MetricPut, type RawMetric } from '../utils/Typings'
 
 /**
  * Represents a Metric

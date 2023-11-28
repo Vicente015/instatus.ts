@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import { Base, InstatusClient } from '../'
-import { RawTeamMember, TeamUser } from '../utils/Typings'
+import { Base, type InstatusClient } from '../'
+import { type RawTeamMember, type TeamUser } from '../utils/Typings'
 
 export default class TeamMember extends Base {
   id!: string

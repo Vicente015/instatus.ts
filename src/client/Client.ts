@@ -1,6 +1,6 @@
 /* eslint-disable no-void */
 import { BaseClient, StatusPages } from '../'
-import { InstatusClientOptions } from '../utils/Typings'
+import { type InstatusClientOptions } from '../utils/Typings'
 
 /**
  * The main hub to interact with the Instatus API
